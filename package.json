@@ -4,12 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "mock": "json-server -w db.json -p 4200 -d 1750",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "serve": "concurrently \"npm run dev\" \"npm run mock\""
   },
   "dependencies": {
     "next": "9.5.1",
+    "nextjs-progressbar": "0.0.5",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sass": "^1.26.10"
   }
 }
